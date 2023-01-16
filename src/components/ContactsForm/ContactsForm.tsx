@@ -25,7 +25,7 @@ const ContactsForm = () => {
   const onSubmitAddContact: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
-    const existingNames = contacts.map(el => el.name);
+    const existingNames = contacts.items.map(el => el.name);
 
     if (existingNames.includes(contactName)) {
       alert(`${contactName} is already in contacts.`);
